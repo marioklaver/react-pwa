@@ -3,33 +3,35 @@ import { Typography } from '@components/atoms';
 import { Container } from './CategoryHeader.styles';
 
 export enum ArticleCategory {
-  // eslint-disable-next-line no-unused-vars
-  all,
-  // eslint-disable-next-line no-unused-vars
-  general,
-  // eslint-disable-next-line no-unused-vars
-  business,
-  // eslint-disable-next-line no-unused-vars
-  entertainment,
-  // eslint-disable-next-line no-unused-vars
-  health,
-  // eslint-disable-next-line no-unused-vars
-  science,
-  // eslint-disable-next-line no-unused-vars
-  sports,
-  // eslint-disable-next-line no-unused-vars
-  technology,
+  all = 'all',
+  general = 'general',
+  business = 'business',
+  entertainment = 'entertainment',
+  health = 'health',
+  science = 'science',
+  sports = 'sports',
+  technology = 'technology',
 }
+
+const categoryName: Record<ArticleCategory, string> = {
+  [ArticleCategory.all]: 'Top stories',
+  [ArticleCategory.general]: 'World',
+  [ArticleCategory.business]: 'Business',
+  [ArticleCategory.entertainment]: 'Entertainment',
+  [ArticleCategory.health]: 'Health',
+  [ArticleCategory.science]: 'Science',
+  [ArticleCategory.sports]: 'Sports',
+  [ArticleCategory.technology]: 'Technology',
+};
 
 interface Props {
   category: ArticleCategory;
-  small?: boolean;
 }
 
-export const CategoryHeader: FC<Props> = ({ category, small = false }) => {
+export const CategoryHeader: FC<Props> = ({ category }) => {
   return (
     <Container>
-      <Typography variant={small ? 'h5' : 'h4'}>{category}</Typography>
+      <Typography variant="h3">{categoryName[category]}</Typography>
     </Container>
   );
 };

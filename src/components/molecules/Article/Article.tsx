@@ -25,7 +25,7 @@ export const Article: FC<Props> = ({ newsItem, small = false }) => {
         <DateTime>{formatDistanceToNow(new Date(publishedAt), { addSuffix: true })}</DateTime>
       </ContentContainer>
       <ImageContainer>
-        <img src={urlToImage} width={small ? 111 : 200} height={111} style={{ objectFit: 'cover' }} />
+        <img alt={title} src={urlToImage} width={small ? 111 : 200} height={111} style={{ objectFit: 'cover' }} />
       </ImageContainer>
     </Container>
   );

@@ -5,6 +5,13 @@ import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
   typography: {
+    h3: {
+      fontFamily: 'Google Sans, sans-serif',
+      fontSize: '1.25rem',
+      lineHeight: 1.3,
+      fontWeight: 400,
+      color: '#1867DC',
+    },
     h4: {
       fontFamily: 'Google Sans, sans-serif',
       fontSize: '1.25rem',
