@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Button, IconButton, Toolbar, Typography } from '@mui/material';
-import { AppBar } from '@components/atoms';
+import { Typography } from '@mui/material';
+import { AppBar, Button, IconButton, Toolbar } from '@components/atoms';
 import { MenuItems } from './AppToolbar.styles';
 
 export const AppToolbar = () => {
