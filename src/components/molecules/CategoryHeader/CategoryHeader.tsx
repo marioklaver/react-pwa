@@ -3,7 +3,6 @@ import { Typography } from '@components/atoms';
 import { Container } from './CategoryHeader.styles';
 
 export enum ArticleCategory {
-  all = 'all',
   general = 'general',
   business = 'business',
   entertainment = 'entertainment',
@@ -14,7 +13,6 @@ export enum ArticleCategory {
 }
 
 const categoryName: Record<ArticleCategory, string> = {
-  [ArticleCategory.all]: 'Top stories',
   [ArticleCategory.general]: 'World',
   [ArticleCategory.business]: 'Business',
   [ArticleCategory.entertainment]: 'Entertainment',

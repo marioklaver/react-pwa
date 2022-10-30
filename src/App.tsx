@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
-import { Homepage } from '@components/pages';
+import { Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
+import './App.css';
+import { CategoryPage, Homepage } from '@components/pages';
 
 const theme = createTheme({
   components: {
@@ -14,6 +15,9 @@ const theme = createTheme({
           lineHeight: 1.3,
           fontWeight: 400,
           textTransform: 'inherit',
+          '&.Mui-selected': {
+            color: '#FFF',
+          },
         },
       },
     },
@@ -46,7 +50,10 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Homepage />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/:category" element={<CategoryPage />} />
+      </Routes>
     </ThemeProvider>
   );
 }

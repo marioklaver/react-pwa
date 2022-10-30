@@ -9,13 +9,17 @@ export const Homepage: FC = () => {
       header={<AppToolbar />}
       mainContent={
         <ListLayout>
-          <ArticleSection category={ArticleCategory.all} />
+          <ArticleSection category={ArticleCategory.general} />
+          <ArticleSection category={ArticleCategory.sports} />
         </ListLayout>
       }
       sideContent={
         <ListLayout>
-          <ArticleSection category={ArticleCategory.sports} small />
           <ArticleSection category={ArticleCategory.technology} small />
+          <ArticleSection category={ArticleCategory.entertainment} small />
+          <ArticleSection category={ArticleCategory.science} small />
+          <ArticleSection category={ArticleCategory.business} small />
+          <ArticleSection category={ArticleCategory.health} small />
         </ListLayout>
       }
     />
