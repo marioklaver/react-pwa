@@ -1,23 +1,24 @@
 import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Typography } from '@mui/material';
-import { AppBar, Button, IconButton, Toolbar } from '@components/atoms';
-import { MenuItems } from './AppToolbar.styles';
+import { AppBar, Button, IconButton, Tab, Tabs, Toolbar } from '@components/atoms';
+import { MenuIcon, HomeIcon } from '@components/atoms/icons';
 
 export const AppToolbar = () => {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+        <IconButton size="large" edge="start" sx={{ mr: 2 }}>
           <MenuIcon />
         </IconButton>
-        <MenuItems>
-          <Typography variant="h6">Net binnen</Typography>
-          <Typography variant="h6">Algemeen</Typography>
-          <Typography variant="h6">Economie</Typography>
-          <Typography variant="h6">Sport</Typography>
-          <Typography variant="h6">Tech</Typography>
-        </MenuItems>
+        <Tabs value={'one'} style={{ flex: 1 }}>
+          <Tab icon={<HomeIcon />} />
+          <Tab label="World" />
+          <Tab label="Business" />
+          <Tab label="Entertainment" />
+          <Tab label="Health" />
+          <Tab label="Science" />
+          <Tab label="Sports" />
+          <Tab label="Technology" />
+        </Tabs>
         <Button color="inherit">Login</Button>
       </Toolbar>
     </AppBar>

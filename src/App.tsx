@@ -1,9 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Homepage } from './components/pages/Homepage/Homepage';
+import { Homepage } from '@components/pages';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: '#fff',
+          fontFamily: 'Google Sans, sans-serif',
+          fontSize: '1.25rem',
+          lineHeight: 1.3,
+          fontWeight: 400,
+          textTransform: 'inherit',
+        },
+      },
+    },
+  },
   typography: {
     h3: {
       fontFamily: 'Google Sans, sans-serif',

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Paper } from '@mui/material';
+import { Paper } from '@components/atoms';
 import { Article, ArticleCategory, CategoryHeader } from '@components/molecules';
 import { useNewsApi } from '@hooks/useNewsApi/useNewsApi';
 
@@ -12,7 +12,7 @@ export const ArticleSection: FC<Props> = ({ category, small = false }) => {
   const { newsItems } = useNewsApi(category);
 
   return (
-    <Paper square>
+    <Paper>
       <CategoryHeader category={category} />
       {newsItems
         .filter((newsItem) => newsItem.urlToImage)
