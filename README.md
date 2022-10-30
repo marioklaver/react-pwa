@@ -32,7 +32,7 @@ The src/service-worker.ts file is now registered and ready to play its key role 
 
 ## Features to include in offline-ready web apps
 
-- [ ]  App always available
+- [ ] App always available
 - [ ] Online runtime data thoughtfully collected
 - [ ] Offline runtime data safely preserved
 - [ ] Connection failures do not break the flow
